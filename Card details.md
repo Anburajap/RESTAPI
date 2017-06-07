@@ -6,15 +6,14 @@ Cards resource represents following details
 
 | Property | Type | As request | As response | Description |
 | :-------------------- | :---------- | :-------------------- | :-------------------- | ------------------------------------------------------------ |
-| id | String | Not required | Returned always | Its helps to identify Card resource. It is a randomly generated for each resource .|
-| holderName|String | Optional | Returned always | Its helps to identify the name of the card holder.|
-|cardType|String  | Optional | Returned always| It contains the type of card like Visa,Maestro.|
-|cardNumber|String | Optional | Returned always| It contains the card number of the Payment card.|
-|expiryMonth|Integer | Optional | Returned always| It contains the Expiry month of the payment card.|
-|expiryYear|Integer | Optional | Returned always| It contains the Expiry year of the payment card.|
-|saveCardID|String | Optional | Returned always| It contains the unique id for each card.|
-|cvv|Integer| Optional | Returned always| It contains the cvv number of the card|
-|priorityCard|String| Optional | Returned always| It contains the priority flag of that particular customer. Value may be 'Y' or 'N'|
+| id | String | Mandatory | Returned always | It contains the unique id for each card .|
+| holderName|String | Mandatory | Returned always | Its helps to identify the name of the card holder.|
+|cardType|String  | Mandatory | Returned always| It contains the type of card like Visa,Maestro,Master.|
+|cardNumber|String | Mandatory | Returned always| It contains the card number of the Payment card.|
+|expiryMonth|Integer | Mandatory | Returned always| It contains the Expiry month of the payment card.|
+|expiryYear|Integer | Mandatory | Returned always| It contains the Expiry year of the payment card.|
+|cvv|Integer| Mandatory | Returned always| It contains the cvv number of the card|
+|priorityCard|boolean| Mandatory | Returned always| It contains the priority flag of that particular customer. Value may be 'True' or 'False'|
 
 ### Use cases
 
@@ -206,7 +205,7 @@ Cards resource represents following details
 ### Edit card Detail [PUT /cards/{id}]
 
 + Parameters
-
+    + cid: 05e230bf-a9cf-4b31-bc54-d3a995f62526
     + id: 00505683065B1EE78EF34A3F0BD0AF4C (string) - SaveCardId
 
 + Request
